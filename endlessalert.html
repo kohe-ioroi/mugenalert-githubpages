@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>無限アラート</title>
+</head>
+<body>
+    <h1>Github Pages</h1>
+    スクリプトを起動する場合は「OK」を押してください。
+    <script>
+        history.pushState(null, null, null);
+        var count = 1;
+        const countup = function(){
+            alert("俺は君の"+count++ +"年後を見ている\n( (c ：; ]ﾐ");
+            setTimeout(countup,0);
+        }
+        const check = confirm("起動しますか？");
+        if (check){countup();}
+        else{alert("停止しました");}
+    </script>
+</body>
+</html>
